@@ -1,0 +1,211 @@
+<html lang="en"> <!-- Establishing html -->
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="assets/css/perspectiveRules.css" rel="stylesheet" />
+<link href="assets/css/style.css" rel="stylesheet" />
+
+<!-- Starting css style -->
+<style> 
+
+/* CSS code was either edited from w38schools tutorials or wrote myself*/
+body {
+    background-color: #FFF;
+}
+/* changes the background color*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2c333a;
+}
+/* Edits the list qualities*/
+li {
+    float: center;
+    border-right:0px solid #bbb;
+    display: inline-block;
+}
+/* changes the background color*/
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+/* Edits the text in the navigation bar*/
+li a:hover:not(.active) {
+    background-color: #111;
+}
+/* Edits the color of the navigation bar hover */
+.active {
+    background-color: #3fc093;
+}
+/* Changes the color of the active tab*/
+.just {
+    text-align: justify;
+    text-justify: inter-word;
+}
+/* Justifies the text */
+p.namefont {
+    font-family: "Tahoma", Geneva, sans-serif;
+    font-size: 71px;
+    color: #4d5966;
+
+}
+/* Edits the size and style of the fonts */
+p.fontheader {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 14px;
+}
+/* Edits the size and style of the fonts */
+p.copyright {
+    font-family: "Tahoma", Geneva, sans-serif;
+    font-size: 10px;
+}
+/* Edits the size and style of the copyright */
+p.aboutpagetext {
+    font-family: "Tahoma", Geneva, sans-serif;
+    font-size: 25px;
+}
+/* Edits the size and style of about page text*/
+#roundedimage1 {
+    border-radius: 25px;
+    background: url(http://i386.photobucket.com/albums/oo303/bowlingalixP/aliceposter_1.png); 
+    background-size: 500px 818px;
+    width: 500px;
+    height: 818px; 
+}
+/* Rounds the corners of the image on the work page */
+#roundedimage2 {
+    border-radius: 25px;
+    background: url(http://i386.photobucket.com/albums/oo303/bowlingalixP/hungergames.png); 
+    background-size: 250px 400px;
+    width: 250px;
+    height: 400px; 
+}
+/* Rounds the corners of the image on the work page */
+#roundedimage3 {
+    border-radius: 25px;
+    background: url(http://i386.photobucket.com/albums/oo303/bowlingalixP/rockyhorror.png); 
+    background-size: 250px 400px;
+    width: 250px;
+    height: 400px; 
+}
+/* Rounds the corners of the image on the work page */
+#navigation {
+position: fixed;
+margin: -8;
+top: 0;
+width: 100%;
+text-align: center;
+/* Adds shadow to the bottom of the bar */
+-webkit-box-shadow: 0px 0px 10px 0px #000000;
+-moz-box-shadow: 0px 0px 10px 0px #000000;
+box-shadow: 0px 0px 10px 0px #000000;
+/* Adds the transparent background 
+
+Got this code from w38schools*/}
+/* Sets the navigation bar as fixed */
+
+/* For the subscription button I have not yet added #subscribeposition {
+    position: fixed;
+    text-align: right;
+}*/
+
+
+ .container {
+    width: 100%;
+  }
+  .card {
+    width: 1000px;
+    height: 500px;
+    margin: 1px;
+    position: relative;
+    display: inline-block;
+  }
+}
+</style>
+
+</head>
+
+<body>
+<br><br><br>
+<div id="navigation">
+<ul>
+  <li><a class="active" href="#home"><p class="fontheader">H O M E</p></a></li>
+  <li><a  href="#about"><p class="fontheader">A B O U T</p></a></li>
+  <li><a  href="#work"><p class="fontheader">W O R K</p></a></li>
+ <!-- <div id="subscribeposition">
+    <ul>
+    <li><a href="#subscribe"><p class="fontheader">S U B S C R I B E</p></a></li></ul></div> --> <!-- try to figure out how to make this subscribe button -->
+<!-- Navigation bar-->
+    </div>
+</ul>
+
+
+
+<!-- 
+  </ul> --> <!-- This code is for future use to maybe establish subscribers and an email list -->
+
+<center><table width="900">
+<tr><td colspan="2"><center>
+		<p class="namefont">A L I  &nbsp;&nbsp;&nbsp;H A J I H A I D A R I</p>
+</center></td>
+</tr>
+
+<!-- <tr><td colspan="2"><center>
+
+		<img src="https://scontent-lga3-1.xx.fbcdn.net/hphotos-xfa1/t31.0-8/1537449_10203720307352352_1956697719_o.jpg" height="60%" width="100%"></img>
+
+</center></td></tr> Took this stuff out -->
+<tr><td colspan="2">
+<div class="container">
+    <div class="card">
+        <img alt="background" src="http://i386.photobucket.com/albums/oo303/bowlingalixP/backgroundfinal%20copy_1.png" />
+        <img alt="ui" src="http://i386.photobucket.com/albums/oo303/bowlingalixP/background%20first%20image%20copy_2.png" />
+        <img alt="ui-2" src="assets/images/HM_jviewz_sotm_03.png" />
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="jquery.logosDistort.js"></script>
+  <script src="assets/js/jquery.particleground.min.js"></script>
+  <script>
+      new logosDistort(
+        document.getElementsByClassName('card'),
+        {
+          container: 'self',
+          perspectiveMulti: 1.2,
+          mouseMode: 'magnetic',
+          outerBuffer: 2,
+          effectWeight: 4
+        }
+      );
+  </script>
+</td></tr>
+
+<tr ><td colspan="2">
+
+		<center><a href="https://www.facebook.com/alihajihaidari">
+		<img border="0" alt="Facebook" src="http://www.brazilianblowout.us.com/img/facebook-grey1.gif" width="40" height="40">
+		</a>
+
+		<a href="https://www.linkedin.com/in/ali-hajihaidari-64581b90">
+		<img border="0" alt="LinkedIn" src="http://innokinetics.com/activeapp/wp-content/uploads/2014/12/linkedin-icon-300x300.png" width="40" height="40">
+		</a>
+
+		<a href="mailto:alihajihaidari@aol.com?Subject=Re: Website%20Referenced">
+		<img border="0" alt="Email" src="https://www.studentadvantage.com/gfx/noncardholder/icon_email.png" width="40" height="40">
+		</a></center>
+
+
+</td></tr>
+
+</table>
+
+</body>
+
+<center><p class="copyright">C O P Y R I G H T&nbsp;&nbsp;&nbsp;  © &nbsp;&nbsp;&nbsp;A L I  &nbsp;&nbsp;&nbsp;H A J I H A I D A R I</p></center>
+</html>
